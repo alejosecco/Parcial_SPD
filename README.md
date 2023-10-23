@@ -46,6 +46,24 @@ sensor de luz ambiental.
 ---
 ![Tinkercad](./PARTE_3/imagen.png)
 ### Descripción
-En la parte 3 del parcial utulice como base la parte 2 a la cual se le agrego una fotoresistencia, la que ahora controlaria la velocidad del contador.
+En la parte 3 del parcial utilice como base la parte 2 a la cual se le agrego una fotoresistencia, la que ahora controlaria la velocidad del contador.
 - [LINK TINKERCAD](https://www.tinkercad.com/things/eoWokYXtyRT-copy-of-segunda-parte-alejo-secco-1d/editel?sharecode=haLlts5S08DdoSgGPAP2GvX9R8VcqmyBHzSxKZt0WFI).
+---
+## PARTE 4
+## Modificación según el Último Número de Documento
+### Consigna
+Modifica el proyecto de la Parte 2 de la siguiente manera:
+1. Considerando el último número de tu número de documento (DNI o documento de identidad), modifica una funcionalidad del proyecto.
+
+-Si tu número de documento termina en (0-3) deberás implementar a tu proyecto que el interruptor deslizante de la parte dos tenga la función de encender y apagar el sistema, solo mostrando el contador.
+
+-Si tu número de documento termina en (4-6) deberás implementar a tu proyecto que el motor solo funcione si el interruptor deslizante está del lado de los números primos. 
+
+-Si tu número de documento termina en (7-9) deberás implementar a tu proyecto que no muestre los números primos sino los impares. 
+
+---
+![Tinkercad](./PARTE_3/imagen.png)
+### Descripción
+En la parte 4 del parcial utilice como base la parte 3 a la cual se le cambie el switch que deja de mostrar los primos y ahora apaga el sistema, sin reiniciar el contador
+- [LINK TINKERCAD](https://www.tinkercad.com/things/a96WIHXLCBs-copy-of-tercera-parte-alejo-secco-1d/editel?sharecode=Xa48HzsirzFyrpsEqQIF38EgDuI2P-6_hWyjT65VCro).
 ---
