@@ -62,7 +62,7 @@ Modifica el proyecto de la Parte 2 de la siguiente manera:
 -Si tu número de documento termina en (7-9) deberás implementar a tu proyecto que no muestre los números primos sino los impares. 
 
 ---
-![Tinkercad](./PARTE_3/imagen.png)
+![Tinkercad](./PARTE_4/imagen.png)
 ### Descripción
 En la parte 4 del parcial utilice como base la parte 3 a la cual se le cambie el switch que deja de mostrar los primos y ahora apaga el sistema, sin reiniciar el contador
 - [LINK TINKERCAD](https://www.tinkercad.com/things/a96WIHXLCBs-copy-of-tercera-parte-alejo-secco-1d/editel?sharecode=Xa48HzsirzFyrpsEqQIF38EgDuI2P-6_hWyjT65VCro).
