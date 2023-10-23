@@ -1,0 +1,198 @@
+// C++ code
+//
+#define LED_A 10
+#define LED_B 11
+#define LED_F 9
+#define LED_G 8
+#define LED_E 7
+#define LED_D 6
+#define LED_C 5
+#define CATODO_1 A1
+#define CATODO_2 A2
+#define BOTON_1 4
+#define BOTON_2 3
+#define BOTON_3 2
+int primerDigito = 0;
+int segundoDigito = 0;
+int sube = 1;
+int estadoSube = 1;
+int baja = 1;
+int estadoBaja = 1;
+int reset = 1;
+int estadoReset = 1;
+int interruptor = 0;
+
+void setup()
+{
+  pinMode(LED_A, OUTPUT);
+  pinMode(LED_B, OUTPUT);
+  pinMode(LED_C, OUTPUT);
+  pinMode(LED_D, OUTPUT);
+  pinMode(LED_E, OUTPUT);
+  pinMode(LED_F, OUTPUT);
+  pinMode(LED_G, OUTPUT);
+  pinMode(CATODO_1, OUTPUT);
+  pinMode(CATODO_2, OUTPUT);
+  pinMode(BOTON_1, INPUT_PULLUP);
+  pinMode(BOTON_2, INPUT_PULLUP);
+  pinMode(BOTON_3, INPUT_PULLUP);
+}
+
+void loop()
+{
+  int pressed = keypressed();//suma 1-resta 1-reinicia el contador
+  if(pressed==BOTON_2)
+  {
+    primerDigito++;
+  }
+  else if(pressed==BOTON_3)
+  {
+    primerDigito--;
+  }
+  else if(pressed==BOTON_1)
+  {
+    segundoDigito=0;
+    primerDigito = 0;
+  }
+  //multiplexación
+      digitalWrite(CATODO_1,HIGH);
+      digitalWrite(CATODO_2,HIGH);
+      delay(1);
+      numerosDisplay(segundoDigito);
+      digitalWrite(CATODO_1,LOW);
+      digitalWrite(CATODO_2,HIGH);
+      delay(4);
+      
+      digitalWrite(CATODO_1,HIGH);
+      digitalWrite(CATODO_2,HIGH);
+      delay(1);
+      numerosDisplay(primerDigito);
+      digitalWrite(CATODO_1,HIGH);
+      digitalWrite(CATODO_2,LOW);
+      delay(4);
+  
+      if(primerDigito==10)
+      {
+        primerDigito=0;
+        segundoDigito +=1;
+        if(segundoDigito==10)
+        {
+          segundoDigito=0;
+        }
+      }
+}
+
+
+
+void numerosDisplay(int numero)
+  //se encarga de mostrar el numero dado en el display
+{
+  digitalWrite(LED_A, LOW);
+  digitalWrite(LED_B, LOW);
+  digitalWrite(LED_C, LOW);
+  digitalWrite(LED_D, LOW);
+  digitalWrite(LED_E, LOW);
+  digitalWrite(LED_F, LOW);
+  digitalWrite(LED_G, LOW);
+  switch(numero)
+  {
+    case 0:
+    	digitalWrite(LED_A, HIGH);
+        digitalWrite(LED_B, HIGH);
+        digitalWrite(LED_C, HIGH);
+        digitalWrite(LED_D, HIGH);
+        digitalWrite(LED_E, HIGH);
+        digitalWrite(LED_F, HIGH);
+    	break;
+    case 1:
+    	digitalWrite(LED_B, HIGH);
+      	digitalWrite(LED_C, HIGH);
+    	break;
+    case 2:
+        digitalWrite(LED_A, HIGH);
+        digitalWrite(LED_B, HIGH);
+        digitalWrite(LED_D, HIGH);
+        digitalWrite(LED_E, HIGH);
+        digitalWrite(LED_G, HIGH);
+    	break;
+    case 3:
+       	digitalWrite(LED_A, HIGH);
+        digitalWrite(LED_B, HIGH);
+        digitalWrite(LED_C, HIGH);
+    	digitalWrite(LED_D, HIGH);
+        digitalWrite(LED_G, HIGH);
+    	break;
+    case 4:
+        digitalWrite(LED_B, HIGH);
+        digitalWrite(LED_C, HIGH);
+        digitalWrite(LED_F, HIGH);
+        digitalWrite(LED_G, HIGH);
+    	break;
+    case 5:
+    	digitalWrite(LED_A, HIGH);
+        digitalWrite(LED_C, HIGH);
+        digitalWrite(LED_D, HIGH);
+        digitalWrite(LED_F, HIGH);
+        digitalWrite(LED_G, HIGH);
+    	break;
+    case 6:
+    	digitalWrite(LED_A, HIGH);
+        digitalWrite(LED_C, HIGH);
+        digitalWrite(LED_D, HIGH);
+        digitalWrite(LED_E, HIGH);
+        digitalWrite(LED_F, HIGH);
+        digitalWrite(LED_G, HIGH);
+    	break;
+    case 7:
+    	digitalWrite(LED_A, HIGH);
+        digitalWrite(LED_B, HIGH);
+        digitalWrite(LED_C, HIGH);
+    case 8:
+    	digitalWrite(LED_A, HIGH);
+        digitalWrite(LED_B, HIGH);
+        digitalWrite(LED_C, HIGH);
+        digitalWrite(LED_D, HIGH);
+        digitalWrite(LED_E, HIGH);
+        digitalWrite(LED_F, HIGH);
+        digitalWrite(LED_G, HIGH);
+    	break;
+    case 9:
+    	digitalWrite(LED_A, HIGH);
+        digitalWrite(LED_B, HIGH);
+    	digitalWrite(LED_C, HIGH);
+        digitalWrite(LED_F, HIGH);
+        digitalWrite(LED_G, HIGH);
+  }
+  
+}
+
+int keypressed(void)
+  //se encarga de devolver el boton presionado
+{
+  sube = digitalRead(BOTON_2);
+  baja = digitalRead(BOTON_3);
+  reset = digitalRead(BOTON_1);
+  if(sube)
+    estadoSube = 1;
+  if(baja)
+    estadoBaja = 1;
+  if(reset)
+    estadoReset = 1;
+  	
+  	if(sube==0 && sube != estadoSube)
+    {
+      estadoSube = sube;
+      return BOTON_2;
+    }
+  	if(baja==0 && baja != estadoBaja)
+    {
+      estadoBaja = baja;
+      return BOTON_3;
+    }
+  	if(reset==0 && reset != estadoReset)
+    {
+      estadoReset = reset;
+      return BOTON_1;
+    }
+  return 0;
+} 
