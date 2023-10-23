@@ -10,7 +10,7 @@ su valor en una unidad con los botones.
 ---
 ![Tinkercad](./PARTE_1/imagen.png)
 ### Descripción
-En este parrafo deberan describir que funcion cumple su proyecto. Que solucion esta ofreciendo.
+En la parte uno del parcial hice el contador de 0 a 99 usando 2 displays de 7 segmentos. Este contador se controlaba con 3 botones los cuales uno sumaba 1 otro restaba 1 y el otro lo reiniciaba.
 - [LINK TINKERCAD](https://www.tinkercad.com/things/aZlg2pXwmcM-copy-of-copy-of-primera-parte-alejo-secco-1d/editel?sharecode=XqkChwjbE328AVAaIRZkOaZSaZtfEGOYrFCR56Fd9UM).
 ---
 ## PARTE 2
@@ -26,7 +26,8 @@ integrar en el proyecto.
 ---
 ![Tinkercad](./PARTE_2/imagen.png)
 ### Descripción
-En este parrafo deberan describir que funcion cumple su proyecto. Que solucion esta ofreciendo.
+En la parte 2 del parcial utilice como base la parte uno a la cual ya no se controla con botones si no que ahora se controla con un switch. Con este switch se puede elegir si el contador funciona como en la parte 1 o si muestra los numeros primos del 0 al 99.
+Ademas se le agrego un motor se maneja en relacion con el contador.
 - [LINK TINKERCAD](https://www.tinkercad.com/things/9YKdzDm0ft4-segunda-parte-alejo-secco-1d/editel?sharecode=_l5Oys86G5qd01NMyo-d_k_nrqy1tC6YjSSq9hAh3aQ).
 ---
 ## PARTE 3
@@ -45,6 +46,6 @@ sensor de luz ambiental.
 ---
 ![Tinkercad](./PARTE_3/imagen.png)
 ### Descripción
-En este parrafo deberan describir que funcion cumple su proyecto. Que solucion esta ofreciendo.
+En la parte 3 del parcial utulice como base la parte 2 a la cual se le agrego una fotoresistencia con la cual se controla la velocidad del contador.
 - [LINK TINKERCAD](https://www.tinkercad.com/things/eoWokYXtyRT-copy-of-segunda-parte-alejo-secco-1d/editel?sharecode=haLlts5S08DdoSgGPAP2GvX9R8VcqmyBHzSxKZt0WFI).
 ---
