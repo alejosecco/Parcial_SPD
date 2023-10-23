@@ -46,6 +46,6 @@ sensor de luz ambiental.
 ---
 ![Tinkercad](./PARTE_3/imagen.png)
 ### Descripción
-En la parte 3 del parcial utulice como base la parte 2 a la cual se le agrego una fotoresistencia con la cual se controla la velocidad del contador.
+En la parte 3 del parcial utulice como base la parte 2 a la cual se le agrego una fotoresistencia, la que ahora controlaria la velocidad del contador.
 - [LINK TINKERCAD](https://www.tinkercad.com/things/eoWokYXtyRT-copy-of-segunda-parte-alejo-secco-1d/editel?sharecode=haLlts5S08DdoSgGPAP2GvX9R8VcqmyBHzSxKZt0WFI).
 ---
