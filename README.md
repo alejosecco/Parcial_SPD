@@ -27,7 +27,7 @@ integrar en el proyecto.
 ![Tinkercad](./PARTE_2/imagen.png)
 ### Descripción
 En la parte 2 del parcial utilice como base la parte uno a la cual ya no se controla con botones si no que ahora se controla con un switch. Con este switch se puede elegir si el contador funciona como en la parte 1 o si muestra los numeros primos del 0 al 99.
-Ademas se le agrego un motor se maneja en relacion con el contador.
+Ademas se le agrego un motor se maneja en relacion al sensor de temperatura.
 - [LINK TINKERCAD](https://www.tinkercad.com/things/9YKdzDm0ft4-segunda-parte-alejo-secco-1d/editel?sharecode=_l5Oys86G5qd01NMyo-d_k_nrqy1tC6YjSSq9hAh3aQ).
 ---
 ## PARTE 3
